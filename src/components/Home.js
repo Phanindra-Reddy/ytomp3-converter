@@ -14,9 +14,10 @@ function Home() {
       setError(true);
     } else {
       setError(false);
-      var res = url.split("=");
-      var videoId = res[1];
-
+      //   var res = url.split("=");
+      //   var videoId = res[1];
+      var res = url.slice(-11);
+      var videoId = res;
       const options = {
         method: "GET",
         url: "https://youtube-mp36.p.rapidapi.com/dl",
@@ -44,7 +45,6 @@ function Home() {
         });
     }
   };
-
 
   return (
     <>
